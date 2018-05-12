@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0409A0C31FEAAE2B00AF872B /* Encodable Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409A0C21FEAAE2B00AF872B /* Encodable Extensions.swift */; };
+		0409A0C51FEAC8EF00AF872B /* Snapshot Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409A0C41FEAC8EF00AF872B /* Snapshot Extensions.swift */; };
+		042ABA172035D97700F3792B /* navigationToUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ABA162035D97700F3792B /* navigationToUserList.swift */; };
+		04400DBA202CA43300DD5007 /* ViewControllerLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */; };
+		04400DC0202CD3AF00DD5007 /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */; };
+		048ED5A31FE450A000AAEEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5A21FE450A000AAEEFB /* AppDelegate.swift */; };
+		048ED5A51FE450A000AAEEFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5A41FE450A000AAEEFB /* ViewController.swift */; };
+		048ED5A81FE450A000AAEEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048ED5A61FE450A000AAEEFB /* Main.storyboard */; };
+		048ED5AA1FE450A000AAEEFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048ED5A91FE450A000AAEEFB /* Assets.xcassets */; };
+		048ED5AD1FE450A000AAEEFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048ED5AB1FE450A000AAEEFB /* LaunchScreen.storyboard */; };
+		048ED5B51FE450EA00AAEEFB /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5B41FE450EA00AAEEFB /* AlertService.swift */; };
+		048ED5B71FE4511600AAEEFB /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5B61FE4511600AAEEFB /* FIRFirestoreService.swift */; };
+		048ED5B91FE4512200AAEEFB /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5B81FE4512200AAEEFB /* Note.swift */; };
+		048ED5BD1FE457FE00AAEEFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 048ED5BC1FE457FE00AAEEFB /* GoogleService-Info.plist */; };
+		04DB4DAB20A4B93F00B74EA6 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB4DAA20A4B93F00B74EA6 /* EditNoteViewController.swift */; };
+		04DB4DB120A5FCAF00B74EA6 /* ProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB4DB020A5FCAF00B74EA6 /* ProtocolDelegate.swift */; };
+		18BAF7069EC91F6B587BB448 /* Pods_Captain_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA642109AFFDBFFF43A6E306 /* Pods_Captain_Memo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0409A0C21FEAAE2B00AF872B /* Encodable Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable Extensions.swift"; sourceTree = "<group>"; };
+		0409A0C41FEAC8EF00AF872B /* Snapshot Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Snapshot Extensions.swift"; sourceTree = "<group>"; };
+		042ABA162035D97700F3792B /* navigationToUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationToUserList.swift; sourceTree = "<group>"; };
+		04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLoginScreen.swift; sourceTree = "<group>"; };
+		04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
+		048ED59F1FE450A000AAEEFB /* Captain Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Captain Memo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		048ED5A21FE450A000AAEEFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		048ED5A41FE450A000AAEEFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		048ED5A71FE450A000AAEEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		048ED5A91FE450A000AAEEFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		048ED5AC1FE450A000AAEEFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		048ED5AE1FE450A000AAEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048ED5B41FE450EA00AAEEFB /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		048ED5B61FE4511600AAEEFB /* FIRFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRFirestoreService.swift; sourceTree = "<group>"; };
+		048ED5B81FE4512200AAEEFB /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		048ED5BC1FE457FE00AAEEFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04DB4DAA20A4B93F00B74EA6 /* EditNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
+		04DB4DB020A5FCAF00B74EA6 /* ProtocolDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDelegate.swift; sourceTree = "<group>"; };
+		746F197D790BC57A5EC65E6C /* Pods-Captain Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captain Memo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Captain Memo/Pods-Captain Memo.debug.xcconfig"; sourceTree = "<group>"; };
+		F17BA895050A14E3674F7A62 /* Pods-Captain Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Captain Memo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Captain Memo/Pods-Captain Memo.release.xcconfig"; sourceTree = "<group>"; };
+		FA642109AFFDBFFF43A6E306 /* Pods_Captain_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Captain_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		048ED59C1FE4509F00AAEEFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BAF7069EC91F6B587BB448 /* Pods_Captain_Memo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		048ED5961FE4509F00AAEEFB = {
+			isa = PBXGroup;
+			children = (
+				048ED5A11FE450A000AAEEFB /* Captain Memo */,
+				048ED5A01FE450A000AAEEFB /* Products */,
+				D1DD745A72220CDCE3CEB444 /* Pods */,
+				699CF1FF9D7923E5CFAEBD0D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		048ED5A01FE450A000AAEEFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				048ED59F1FE450A000AAEEFB /* Captain Memo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		048ED5A11FE450A000AAEEFB /* Captain Memo */ = {
+			isa = PBXGroup;
+			children = (
+				048ED5BC1FE457FE00AAEEFB /* GoogleService-Info.plist */,
+				048ED5A21FE450A000AAEEFB /* AppDelegate.swift */,
+				048ED5A41FE450A000AAEEFB /* ViewController.swift */,
+				048ED5A61FE450A000AAEEFB /* Main.storyboard */,
+				048ED5A91FE450A000AAEEFB /* Assets.xcassets */,
+				04DB4DAA20A4B93F00B74EA6 /* EditNoteViewController.swift */,
+				048ED5AB1FE450A000AAEEFB /* LaunchScreen.storyboard */,
+				048ED5AE1FE450A000AAEEFB /* Info.plist */,
+				048ED5B41FE450EA00AAEEFB /* AlertService.swift */,
+				048ED5B81FE4512200AAEEFB /* Note.swift */,
+				048ED5B61FE4511600AAEEFB /* FIRFirestoreService.swift */,
+				0409A0C21FEAAE2B00AF872B /* Encodable Extensions.swift */,
+				0409A0C41FEAC8EF00AF872B /* Snapshot Extensions.swift */,
+				04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */,
+				04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */,
+				042ABA162035D97700F3792B /* navigationToUserList.swift */,
+				04DB4DB020A5FCAF00B74EA6 /* ProtocolDelegate.swift */,
+			);
+			path = "Captain Memo";
+			sourceTree = "<group>";
+		};
+		699CF1FF9D7923E5CFAEBD0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA642109AFFDBFFF43A6E306 /* Pods_Captain_Memo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1DD745A72220CDCE3CEB444 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				746F197D790BC57A5EC65E6C /* Pods-Captain Memo.debug.xcconfig */,
+				F17BA895050A14E3674F7A62 /* Pods-Captain Memo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		048ED59E1FE4509F00AAEEFB /* Captain Memo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048ED5B11FE450A000AAEEFB /* Build configuration list for PBXNativeTarget "Captain Memo" */;
+			buildPhases = (
+				0EC59B615E3E4B63AE744CAD /* [CP] Check Pods Manifest.lock */,
+				048ED59B1FE4509F00AAEEFB /* Sources */,
+				048ED59C1FE4509F00AAEEFB /* Frameworks */,
+				048ED59D1FE4509F00AAEEFB /* Resources */,
+				D5E029759D8133714299017B /* [CP] Embed Pods Frameworks */,
+				1F5A5A29DE3B02D2B8DA33F5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Captain Memo";
+			productName = "Captain Memo";
+			productReference = 048ED59F1FE450A000AAEEFB /* Captain Memo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		048ED5971FE4509F00AAEEFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Artem Miklashevych";
+				TargetAttributes = {
+					048ED59E1FE4509F00AAEEFB = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 048ED59A1FE4509F00AAEEFB /* Build configuration list for PBXProject "Captain Memo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 048ED5961FE4509F00AAEEFB;
+			productRefGroup = 048ED5A01FE450A000AAEEFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				048ED59E1FE4509F00AAEEFB /* Captain Memo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		048ED59D1FE4509F00AAEEFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048ED5AD1FE450A000AAEEFB /* LaunchScreen.storyboard in Resources */,
+				048ED5BD1FE457FE00AAEEFB /* GoogleService-Info.plist in Resources */,
+				048ED5AA1FE450A000AAEEFB /* Assets.xcassets in Resources */,
+				048ED5A81FE450A000AAEEFB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EC59B615E3E4B63AE744CAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Captain Memo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F5A5A29DE3B02D2B8DA33F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captain Memo/Pods-Captain Memo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5E029759D8133714299017B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Captain Memo/Pods-Captain Memo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Captain Memo/Pods-Captain Memo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		048ED59B1FE4509F00AAEEFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048ED5A51FE450A000AAEEFB /* ViewController.swift in Sources */,
+				042ABA172035D97700F3792B /* navigationToUserList.swift in Sources */,
+				04DB4DAB20A4B93F00B74EA6 /* EditNoteViewController.swift in Sources */,
+				0409A0C31FEAAE2B00AF872B /* Encodable Extensions.swift in Sources */,
+				04DB4DB120A5FCAF00B74EA6 /* ProtocolDelegate.swift in Sources */,
+				04400DC0202CD3AF00DD5007 /* LoggedInVC.swift in Sources */,
+				048ED5B71FE4511600AAEEFB /* FIRFirestoreService.swift in Sources */,
+				0409A0C51FEAC8EF00AF872B /* Snapshot Extensions.swift in Sources */,
+				048ED5B51FE450EA00AAEEFB /* AlertService.swift in Sources */,
+				048ED5B91FE4512200AAEEFB /* Note.swift in Sources */,
+				04400DBA202CA43300DD5007 /* ViewControllerLoginScreen.swift in Sources */,
+				048ED5A31FE450A000AAEEFB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		048ED5A61FE450A000AAEEFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048ED5A71FE450A000AAEEFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		048ED5AB1FE450A000AAEEFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048ED5AC1FE450A000AAEEFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		048ED5AF1FE450A000AAEEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		048ED5B01FE450A000AAEEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		048ED5B21FE450A000AAEEFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 746F197D790BC57A5EC65E6C /* Pods-Captain Memo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9LC9YMM8H3;
+				INFOPLIST_FILE = "Captain Memo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ArtemMiklashevych.Captain-Memo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		048ED5B31FE450A000AAEEFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F17BA895050A14E3674F7A62 /* Pods-Captain Memo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9LC9YMM8H3;
+				INFOPLIST_FILE = "Captain Memo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ArtemMiklashevych.Captain-Memo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		048ED59A1FE4509F00AAEEFB /* Build configuration list for PBXProject "Captain Memo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048ED5AF1FE450A000AAEEFB /* Debug */,
+				048ED5B01FE450A000AAEEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		048ED5B11FE450A000AAEEFB /* Build configuration list for PBXNativeTarget "Captain Memo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048ED5B21FE450A000AAEEFB /* Debug */,
+				048ED5B31FE450A000AAEEFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 048ED5971FE4509F00AAEEFB /* Project object */;
+}
