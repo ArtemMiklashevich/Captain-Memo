@@ -16,7 +16,6 @@ class LoggedInVC: UIViewController {
         do {
           try Auth.auth().signOut()
             dismiss(animated: true, completion: nil)
-            //ViewController.isLogin = false
            self.returnToLoginScreen()
         } catch {
             print("There was a problem logging out")
@@ -38,4 +37,5 @@ class LoggedInVC: UIViewController {
         let returnBack: navigationToUserList = storyboard.instantiateViewController(withIdentifier: "navigationToUserList") as! navigationToUserList
          self.present(returnBack, animated: true, completion: nil)
     }
+    
 }

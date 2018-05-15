@@ -41,27 +41,30 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
         else {
             print("User registered - \(user?.email ?? "User not found")")
         }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        listener?.remove()
     }
     
     fileprivate func observeQuery() {
         stopObserving()
-        
         if let query = self.getNotesDbCollection() {
             listener =  query.addSnapshotListener { (snapshot, error) in
                 guard let snapshot = snapshot else {
                     print("Error fetching snapshot results: \(error!)")
                     return
                 }
-                // self.notes = [Note]()
                 self.notes.removeAll()
-                do {
-                    for document in snapshot.documents {
-                        let note = try document.decode(as: Note.self)
-                        self.notes.append(note)
-                        print(note)
-                    }
-                } catch {
-                    print(error)
+                for doc in snapshot.documents {
+                    //let data = doc.data()
+                    let id = doc.documentID
+                    let text = doc["text"] as? String ?? ""
+                    let date = doc["date"] as? Date
+                    let note = Note(id: id, text: text, date: date)
+                    self.notes.append(note)
                 }
                 self.tableView.reloadData()
             }
@@ -81,8 +84,16 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
         let note = notes[indexPath.row]
         
         cell.textLabel?.text = note.text
-        cell.detailTextLabel?.text =  "abc"//String(note.date)
         
+        var strDate = ""
+        if note.date != nil {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .short
+            dateFormatter.locale = Locale(identifier: "en_US")
+            strDate = dateFormatter.string(from: note.date!)
+        }
+        cell.detailTextLabel?.text = strDate
         return cell
     }
     
@@ -93,32 +104,22 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
     
     // ADD BUTTON
     @IBAction func addActionTapped(_ sender: UIBarButtonItem) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller: EditNoteViewController = storyboard.instantiateViewController(withIdentifier: "EditNoteViewController") as! EditNoteViewController
-        controller.delegate = self
-        controller.isNewNote = true
-        self.navigationController?.pushViewController(controller, animated: true)
+        transition(isNewNote: true, updateNote: nil)
     }
     
     // Update
     override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath) {
         let note = notes[IndexPath.row]
-            if self.getNotesDbCollection() != nil {
-                let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let controller: EditNoteViewController = storyboard.instantiateViewController(withIdentifier: "EditNoteViewController") as! EditNoteViewController
-                controller.delegate = self
-                controller.isNewNote = false
-                controller.updatedNote = note
-                self.navigationController?.pushViewController(controller, animated: true)
-            }
+        if self.getNotesDbCollection() != nil {
+            transition(isNewNote: false, updateNote: note)
+        }
     }
     
     // Delete
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         let note = notes[indexPath.row]
-        do {
-            guard let id = note.id else { throw MyError.encodingError }
+        if let id = note.id {
             if let ref = self.getNotesDbCollection() {
                 ref.document(id).delete() { err in
                     if let err = err {
@@ -128,9 +129,6 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
                     }
                 }
             }
-        }
-        catch {
-            print(error)
         }
     }
     
@@ -147,12 +145,12 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
     }
     
     func saveNote(_ controller: EditNoteViewController, newNote note: Note) {
-        self.getNotesDbCollection()?.addDocument(data: ["text" : note.text])
+        self.getNotesDbCollection()?.addDocument(data: ["text" : note.text, "date" : FieldValue.serverTimestamp()])
     }
     
     func updateNote(_ controller: EditNoteViewController, updatedNote note: Note) {
         if let ref = self.getNotesDbCollection() {
-            ref.document(note.id!).setData(["text" : note.text]) { err in
+            ref.document(note.id!).setData(["text" : note.text, "date" : FieldValue.serverTimestamp()]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {
@@ -162,5 +160,13 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
         }
     }
     
+    func transition(isNewNote: Bool, updateNote: Note?) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller: EditNoteViewController = storyboard.instantiateViewController(withIdentifier: "EditNoteViewController") as! EditNoteViewController
+        controller.delegate = self
+        controller.isNewNote = isNewNote
+        controller.updatedNote = updateNote
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 

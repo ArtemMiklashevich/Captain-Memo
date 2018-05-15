@@ -8,7 +8,7 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
     weak var delegate: DatabaseControllerDelegate?
     
     public var isNewNote : Bool = false
-    public var updatedNote : Note = Note(text: " ")
+    public var updatedNote : Note? = nil
     
     @IBOutlet var doneButton: UIBarButtonItem!
     
@@ -17,7 +17,7 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
             noteTextField.addTarget(self, action: #selector(textFieldTextDidChange(_:)), for: .editingChanged)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         doneButton.isEnabled = false
@@ -26,7 +26,11 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
             noteTextField.text = ""
             self.title = "ADD A MEMO"
         } else {
-            noteTextField.text = updatedNote.text
+            if let un = updatedNote {
+                noteTextField.text = un.text
+            } else {
+                noteTextField.text = ""
+            }
             self.title = "UPDATE A MEMO"
         }
     }
@@ -37,11 +41,13 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         if isNewNote {
-            let note = Note(text: noteTextField.text!)
+            let note = Note(id: nil, text: noteTextField.text!, date: nil)
             delegate?.saveNote(self, newNote: note)
         } else {
-            updatedNote.text = noteTextField.text!
-            delegate?.updateNote(self, updatedNote: updatedNote)
+            if var un = updatedNote {
+                un.text = noteTextField.text!
+                delegate?.updateNote(self, updatedNote: un)
+            }
         }
         self.navigationController?.popViewController(animated: true)
     }

@@ -8,17 +8,18 @@
 
 import Foundation
 
-protocol Identifiable {
+/*protocol Identifiable {
     var id: String? {get set}
-}
+} */
 
-struct Note: Codable, Identifiable {
+struct Note: Codable {
     var id: String? = nil
     var text: String
-   // var date: Date
+    var date: Date?
     
-    init(text: String/* ,date: Date*/) {
+    init(id: String?, text: String, date: Date?) {
+        self.id = id
         self.text = text
-     //   self.date = date
+        self.date = date
     }
 }
