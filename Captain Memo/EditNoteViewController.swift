@@ -3,7 +3,7 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class EditNoteViewController: UIViewController, UITextFieldDelegate {
+class EditNoteViewController: UIViewController, UITextViewDelegate {
     
     weak var delegate: DatabaseControllerDelegate?
     
@@ -11,25 +11,25 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
     public var updatedNote : Note? = nil
     
     @IBOutlet var doneButton: UIBarButtonItem!
+  
+    @IBOutlet weak var noteTextView: UITextView!
     
-    @IBOutlet weak var noteTextField: UITextField! {
-        didSet {
-            noteTextField.addTarget(self, action: #selector(textFieldTextDidChange(_:)), for: .editingChanged)
-        }
+    func textViewDidChange(_ textView: UITextView) {
+        updateSubmitButton()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         doneButton.isEnabled = false
-        noteTextField.delegate = self
+        noteTextView.delegate = self
         if isNewNote {
-            noteTextField.text = ""
+            noteTextView.text = ""
             self.title = "ADD A MEMO"
         } else {
             if let un = updatedNote {
-                noteTextField.text = un.text
+                noteTextView.text = un.text
             } else {
-                noteTextField.text = ""
+                noteTextView.text = ""
             }
             self.title = "UPDATE A MEMO"
         }
@@ -41,11 +41,11 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         if isNewNote {
-            let note = Note(id: nil, text: noteTextField.text!, date: nil)
+            let note = Note(id: nil, text: noteTextView.text!, date: nil)
             delegate?.saveNote(self, newNote: note)
         } else {
             if var un = updatedNote {
-                un.text = noteTextField.text!
+                un.text = noteTextView.text!
                 delegate?.updateNote(self, updatedNote: un)
             }
         }
@@ -53,15 +53,11 @@ class EditNoteViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldIsEmpty() -> Bool {
-        guard let text = noteTextField.text else { return true }
+        guard let text = noteTextView.text else { return true }
         return text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
     func updateSubmitButton() {
         doneButton.isEnabled = !textFieldIsEmpty()
-    }
-    
-    @objc func textFieldTextDidChange(_ sender: Any) {
-        updateSubmitButton()
     }
 }

@@ -225,20 +225,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Write a review..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBR-7b-egZ">
-                                <rect key="frame" x="16" y="80" width="343" height="571"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Edit new a Memo..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-kF-ydw">
+                                <rect key="frame" x="10" y="74" width="355" height="583"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textField>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zBR-7b-egZ" firstAttribute="leading" secondItem="Lwa-6T-5tr" secondAttribute="leading" constant="16" id="6gX-vg-32p"/>
-                            <constraint firstItem="4O9-WL-yUc" firstAttribute="top" secondItem="zBR-7b-egZ" secondAttribute="bottom" constant="16" id="7I1-Rh-q9Z"/>
-                            <constraint firstItem="zBR-7b-egZ" firstAttribute="top" secondItem="v2k-o2-aVh" secondAttribute="bottom" constant="16" id="faT-nc-MxP"/>
-                            <constraint firstItem="zBR-7b-egZ" firstAttribute="trailing" secondItem="ffB-03-YT3" secondAttribute="trailingMargin" id="lI7-Un-17J"/>
+                            <constraint firstItem="4O9-WL-yUc" firstAttribute="top" secondItem="JyI-kF-ydw" secondAttribute="bottom" constant="10" id="QkG-QL-hX1"/>
+                            <constraint firstItem="JyI-kF-ydw" firstAttribute="leading" secondItem="Lwa-6T-5tr" secondAttribute="leading" constant="10" id="RlX-kG-8Ik"/>
+                            <constraint firstItem="Lwa-6T-5tr" firstAttribute="trailing" secondItem="JyI-kF-ydw" secondAttribute="trailing" constant="10" id="TMg-EF-CtR"/>
+                            <constraint firstItem="JyI-kF-ydw" firstAttribute="top" secondItem="v2k-o2-aVh" secondAttribute="bottom" constant="10" id="pVz-5g-p29"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lwa-6T-5tr"/>
                     </view>
@@ -257,7 +256,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="doneButton" destination="HfR-dh-Wcn" id="nlw-NW-GD4"/>
-                        <outlet property="noteTextField" destination="zBR-7b-egZ" id="LVM-xh-L73"/>
+                        <outlet property="noteTextView" destination="JyI-kF-ydw" id="51J-g0-c9K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hob-g7-bSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
