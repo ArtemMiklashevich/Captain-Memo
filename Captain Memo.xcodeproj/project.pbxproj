@@ -10,6 +10,19 @@
 		042ABA172035D97700F3792B /* navigationToUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ABA162035D97700F3792B /* navigationToUserList.swift */; };
 		04400DBA202CA43300DD5007 /* ViewControllerLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */; };
 		04400DC0202CD3AF00DD5007 /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */; };
+		0479BF0620B05DB000787746 /* Icon20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEF920B05DAD00787746 /* Icon20.png */; };
+		0479BF0720B05DB000787746 /* Icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFA20B05DAD00787746 /* Icon76.png */; };
+		0479BF0820B05DB000787746 /* Icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFB20B05DAD00787746 /* Icon152.png */; };
+		0479BF0920B05DB000787746 /* Icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFC20B05DAD00787746 /* Icon80.png */; };
+		0479BF0A20B05DB000787746 /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFD20B05DAE00787746 /* Icon120.png */; };
+		0479BF0B20B05DB000787746 /* Icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFE20B05DAE00787746 /* Icon58.png */; };
+		0479BF0C20B05DB000787746 /* Icon87.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFF20B05DAE00787746 /* Icon87.png */; };
+		0479BF0D20B05DB000787746 /* Icon167.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BF0020B05DAE00787746 /* Icon167.png */; };
+		0479BF0E20B05DB000787746 /* Icon180.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BF0120B05DAF00787746 /* Icon180.png */; };
+		0479BF0F20B05DB000787746 /* Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BF0220B05DAF00787746 /* Icon40.png */; };
+		0479BF1020B05DB000787746 /* Icon60.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BF0320B05DAF00787746 /* Icon60.png */; };
+		0479BF1120B05DB000787746 /* Icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BF0420B05DB000787746 /* Icon1024.png */; };
+		0479BF1220B05DB000787746 /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BF0520B05DB000787746 /* Icon29.png */; };
 		048ED5A31FE450A000AAEEFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5A21FE450A000AAEEFB /* AppDelegate.swift */; };
 		048ED5A51FE450A000AAEEFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048ED5A41FE450A000AAEEFB /* ViewController.swift */; };
 		048ED5A81FE450A000AAEEFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048ED5A61FE450A000AAEEFB /* Main.storyboard */; };
@@ -27,6 +40,19 @@
 		042ABA162035D97700F3792B /* navigationToUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationToUserList.swift; sourceTree = "<group>"; };
 		04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLoginScreen.swift; sourceTree = "<group>"; };
 		04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
+		0479BEF920B05DAD00787746 /* Icon20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon20.png; sourceTree = "<group>"; };
+		0479BEFA20B05DAD00787746 /* Icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon76.png; sourceTree = "<group>"; };
+		0479BEFB20B05DAD00787746 /* Icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon152.png; sourceTree = "<group>"; };
+		0479BEFC20B05DAD00787746 /* Icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon80.png; sourceTree = "<group>"; };
+		0479BEFD20B05DAE00787746 /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120.png; sourceTree = "<group>"; };
+		0479BEFE20B05DAE00787746 /* Icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon58.png; sourceTree = "<group>"; };
+		0479BEFF20B05DAE00787746 /* Icon87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon87.png; sourceTree = "<group>"; };
+		0479BF0020B05DAE00787746 /* Icon167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon167.png; sourceTree = "<group>"; };
+		0479BF0120B05DAF00787746 /* Icon180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon180.png; sourceTree = "<group>"; };
+		0479BF0220B05DAF00787746 /* Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon40.png; sourceTree = "<group>"; };
+		0479BF0320B05DAF00787746 /* Icon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon60.png; sourceTree = "<group>"; };
+		0479BF0420B05DB000787746 /* Icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon1024.png; sourceTree = "<group>"; };
+		0479BF0520B05DB000787746 /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
 		048ED59F1FE450A000AAEEFB /* Captain Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Captain Memo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048ED5A21FE450A000AAEEFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048ED5A41FE450A000AAEEFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +82,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0479BEF820B05D6F00787746 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				0479BEF920B05DAD00787746 /* Icon20.png */,
+				0479BF0520B05DB000787746 /* Icon29.png */,
+				0479BF0220B05DAF00787746 /* Icon40.png */,
+				0479BEFE20B05DAE00787746 /* Icon58.png */,
+				0479BF0320B05DAF00787746 /* Icon60.png */,
+				0479BEFA20B05DAD00787746 /* Icon76.png */,
+				0479BEFC20B05DAD00787746 /* Icon80.png */,
+				0479BEFF20B05DAE00787746 /* Icon87.png */,
+				0479BEFD20B05DAE00787746 /* Icon120.png */,
+				0479BEFB20B05DAD00787746 /* Icon152.png */,
+				0479BF0020B05DAE00787746 /* Icon167.png */,
+				0479BF0120B05DAF00787746 /* Icon180.png */,
+				0479BF0420B05DB000787746 /* Icon1024.png */,
+			);
+			name = Icon;
+			path = Icon/Icons;
+			sourceTree = "<group>";
+		};
 		048ED5961FE4509F00AAEEFB = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +124,7 @@
 		048ED5A11FE450A000AAEEFB /* Captain Memo */ = {
 			isa = PBXGroup;
 			children = (
+				0479BEF820B05D6F00787746 /* Icon */,
 				048ED5BC1FE457FE00AAEEFB /* GoogleService-Info.plist */,
 				048ED5A21FE450A000AAEEFB /* AppDelegate.swift */,
 				048ED5A41FE450A000AAEEFB /* ViewController.swift */,
@@ -176,8 +224,21 @@
 			files = (
 				048ED5AD1FE450A000AAEEFB /* LaunchScreen.storyboard in Resources */,
 				048ED5BD1FE457FE00AAEEFB /* GoogleService-Info.plist in Resources */,
+				0479BF1220B05DB000787746 /* Icon29.png in Resources */,
+				0479BF0820B05DB000787746 /* Icon152.png in Resources */,
+				0479BF0B20B05DB000787746 /* Icon58.png in Resources */,
+				0479BF0C20B05DB000787746 /* Icon87.png in Resources */,
+				0479BF0D20B05DB000787746 /* Icon167.png in Resources */,
 				048ED5AA1FE450A000AAEEFB /* Assets.xcassets in Resources */,
+				0479BF0620B05DB000787746 /* Icon20.png in Resources */,
 				048ED5A81FE450A000AAEEFB /* Main.storyboard in Resources */,
+				0479BF0920B05DB000787746 /* Icon80.png in Resources */,
+				0479BF0F20B05DB000787746 /* Icon40.png in Resources */,
+				0479BF0720B05DB000787746 /* Icon76.png in Resources */,
+				0479BF0A20B05DB000787746 /* Icon120.png in Resources */,
+				0479BF1020B05DB000787746 /* Icon60.png in Resources */,
+				0479BF0E20B05DB000787746 /* Icon180.png in Resources */,
+				0479BF1120B05DB000787746 /* Icon1024.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
