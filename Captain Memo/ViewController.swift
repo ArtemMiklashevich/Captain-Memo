@@ -41,7 +41,6 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
         else {
             print("User registered - \(user?.email ?? "User not found")")
         }
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -97,17 +96,17 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
         return cell
     }
     
-    //RETURN BUTTON
+    //Return button
     @IBAction func returnActionTapped(_ sender: UIBarButtonItem) {
         self.returnToBack()
     }
     
-    // ADD BUTTON
+    // Add button
     @IBAction func addActionTapped(_ sender: UIBarButtonItem) {
         transition(isNewNote: true, updateNote: nil)
     }
     
-    // Update
+    // Update touch
     override func tableView(_ tableView: UITableView, didSelectRowAt IndexPath: IndexPath) {
         let note = notes[IndexPath.row]
         if self.getNotesDbCollection() != nil {
@@ -115,7 +114,7 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
         }
     }
     
-    // Delete
+    // Delete swipe left
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         let note = notes[indexPath.row]

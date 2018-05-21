@@ -18,5 +18,4 @@ class FIRFirestoreService {
     func configure() {
         FirebaseApp.configure()
     }
-    
 }

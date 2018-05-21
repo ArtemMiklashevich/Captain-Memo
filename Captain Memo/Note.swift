@@ -8,11 +8,8 @@
 
 import Foundation
 
-/*protocol Identifiable {
-    var id: String? {get set}
-} */
-
 struct Note: Codable {
+    
     var id: String? = nil
     var text: String
     var date: Date?

@@ -76,6 +76,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2iP-pr-SOd"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="lep-8d-Hw9" id="OJP-Bs-y7a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Xc-Ui-NUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,18 +89,21 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NZk-8S-bGJ" customClass="ViewController" customModule="Captain_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem title="return" width="195" style="done" id="axj-FY-SPr">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="kId-bV-iOB"/>
+                        <barButtonItem title="return" width="150" style="done" id="axj-FY-SPr">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="returnActionTapped:" destination="NZk-8S-bGJ" id="jPG-8i-Chk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="add" width="206" style="done" id="ojo-Jm-AIs">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Ppk-1X-SSr"/>
+                        <barButtonItem title="add" width="150" style="done" id="ojo-Jm-AIs">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="addActionTapped:" destination="NZk-8S-bGJ" id="UCP-Lg-IhJ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="WFR-ym-dH5"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="MEMO LIST" id="M75-aW-Av9"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
