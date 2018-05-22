@@ -9,5 +9,7 @@ target 'Captain Memo' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Auth'
+	pod 'Pastel'
+	pod 'Anchors'
 
 end

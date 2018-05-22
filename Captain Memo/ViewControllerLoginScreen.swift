@@ -10,14 +10,22 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import Pastel
+import Anchors
 
 class ViewControllerLoginScreen: UIViewController {
     
+    let pastel = PastelView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.insertSubview(pastel, at: 0)
+        activate(pastel.anchor.edges)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        pastel.startAnimation()
     }
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -38,6 +46,8 @@ class ViewControllerLoginScreen: UIViewController {
             })
         }
     }
+    
+    
     
     @IBAction func createAccountTapped(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text {
