@@ -14,11 +14,13 @@ class EditNoteViewController: UIViewController, UITextViewDelegate {
   
     @IBOutlet weak var noteTextView: UITextView!
     
+    @IBOutlet weak var scroll: UIScrollView!
+    
     func textViewDidChange(_ textView: UITextView) {
         updateSubmitButton()
     }
 
-    override func viewDidLoad() {
+   /* override func viewDidLoad() {
         super.viewDidLoad()
         doneButton.isEnabled = false
         noteTextView.delegate = self
@@ -33,6 +35,10 @@ class EditNoteViewController: UIViewController, UITextViewDelegate {
             }
             self.title = "UPDATE A MEMO"
         }
+    } */
+    
+    override func viewDidAppear(_ animated: Bool) {
+       // noteTextView.becomeFirstResponder()
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -60,4 +66,45 @@ class EditNoteViewController: UIViewController, UITextViewDelegate {
     func updateSubmitButton() {
         doneButton.isEnabled = !textFieldIsEmpty()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        doneButton.isEnabled = false
+        noteTextView.delegate = self
+        if isNewNote {
+            noteTextView.text = ""
+            self.title = "ADD A MEMO"
+        } else {
+            if let un = updatedNote {
+                noteTextView.text = un.text
+            } else {
+                noteTextView.text = ""
+            }
+            self.title = "UPDATE A MEMO"
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(EditNoteViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(EditNoteViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+                //scroll.
+                //self.view.frame.height -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+                 //self.view.frame.height += keyboardSize.height
+            }
+        }
+    }
+
 }

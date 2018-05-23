@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -139,7 +140,6 @@
         <!--View Controller Login Screen-->
         <scene sceneID="UoM-MB-gqw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J9M-JC-Aqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ViewControllerLoginScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w4m-Hp-3BC" customClass="ViewControllerLoginScreen" customModule="Captain_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2z4-sS-kVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -223,6 +223,7 @@
                         <outlet property="passwordTextField" destination="niG-Bp-2AP" id="JyG-hN-dsN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9M-JC-Aqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-407" y="173"/>
         </scene>
@@ -238,19 +239,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write a new Memo..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-kF-ydw">
-                                <rect key="frame" x="10" y="74" width="355" height="583"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hci-O0-5Gn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" text="Write a new Memo..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-kF-ydw">
+                                        <rect key="frame" x="10" y="8" width="355" height="583"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="583" id="6s9-1y-eLw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JyI-kF-ydw" firstAttribute="top" secondItem="Hci-O0-5Gn" secondAttribute="topMargin" id="G4T-ai-0qq"/>
+                                    <constraint firstAttribute="bottom" secondItem="JyI-kF-ydw" secondAttribute="bottom" constant="76" id="Uvg-lW-sSi"/>
+                                    <constraint firstItem="JyI-kF-ydw" firstAttribute="centerX" secondItem="Hci-O0-5Gn" secondAttribute="centerX" id="XHS-94-0yQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="JyI-kF-ydw" secondAttribute="trailing" constant="10" id="hd5-IY-JoJ"/>
+                                    <constraint firstItem="JyI-kF-ydw" firstAttribute="leading" secondItem="Hci-O0-5Gn" secondAttribute="leading" constant="10" id="ilZ-Nf-ar0"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4O9-WL-yUc" firstAttribute="top" secondItem="JyI-kF-ydw" secondAttribute="bottom" constant="10" id="QkG-QL-hX1"/>
-                            <constraint firstItem="JyI-kF-ydw" firstAttribute="leading" secondItem="Lwa-6T-5tr" secondAttribute="leading" constant="10" id="RlX-kG-8Ik"/>
-                            <constraint firstItem="Lwa-6T-5tr" firstAttribute="trailing" secondItem="JyI-kF-ydw" secondAttribute="trailing" constant="10" id="TMg-EF-CtR"/>
-                            <constraint firstItem="JyI-kF-ydw" firstAttribute="top" secondItem="v2k-o2-aVh" secondAttribute="bottom" constant="10" id="pVz-5g-p29"/>
+                            <constraint firstItem="Hci-O0-5Gn" firstAttribute="leading" secondItem="ffB-03-YT3" secondAttribute="leading" id="Oob-9N-vsD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Hci-O0-5Gn" secondAttribute="bottom" constant="-64" id="fEv-lG-GVH"/>
+                            <constraint firstAttribute="trailing" secondItem="Hci-O0-5Gn" secondAttribute="trailing" id="uU2-uG-ENw"/>
+                            <constraint firstItem="Hci-O0-5Gn" firstAttribute="top" secondItem="Lwa-6T-5tr" secondAttribute="top" id="z3m-fx-ZxQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lwa-6T-5tr"/>
                     </view>
@@ -270,11 +286,12 @@
                     <connections>
                         <outlet property="doneButton" destination="HfR-dh-Wcn" id="nlw-NW-GD4"/>
                         <outlet property="noteTextView" destination="JyI-kF-ydw" id="51J-g0-c9K"/>
+                        <outlet property="scroll" destination="Hci-O0-5Gn" id="FGP-DA-7kD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hob-g7-bSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="-495"/>
+            <point key="canvasLocation" x="278" y="-495"/>
         </scene>
     </scenes>
 </document>
