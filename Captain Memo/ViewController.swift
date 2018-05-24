@@ -12,6 +12,8 @@ import FirebaseFirestore
 
 class ViewController: UITableViewController, DatabaseControllerDelegate {
     
+    let backgroundView = UIImageView()
+    
     var notes = [Note]()
     private var listener: ListenerRegistration?
     
@@ -25,6 +27,12 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+         backgroundView.image = UIImage(named: "Memo")!
+         backgroundView.contentMode = .scaleAspectFit
+         backgroundView.alpha = 0.5
+         tableView.backgroundView = backgroundView
+         tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +72,12 @@ class ViewController: UITableViewController, DatabaseControllerDelegate {
                     let date = doc["date"] as? Date
                     let note = Note(id: id, text: text, date: date)
                     self.notes.append(note)
+                }
+                
+                if self.notes.count > 0 {
+                    self.tableView.backgroundView = nil
+                } else {
+                    self.tableView.backgroundView = self.backgroundView
                 }
                 self.tableView.reloadData()
             }
