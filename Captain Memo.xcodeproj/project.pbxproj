@@ -10,6 +10,7 @@
 		042ABA172035D97700F3792B /* navigationToUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042ABA162035D97700F3792B /* navigationToUserList.swift */; };
 		04400DBA202CA43300DD5007 /* ViewControllerLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */; };
 		04400DC0202CD3AF00DD5007 /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */; };
+		0464CB2220B6EFA40002B036 /* Memo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0464CB2120B6EFA30002B036 /* Memo.png */; };
 		0479BF0620B05DB000787746 /* Icon20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEF920B05DAD00787746 /* Icon20.png */; };
 		0479BF0720B05DB000787746 /* Icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFA20B05DAD00787746 /* Icon76.png */; };
 		0479BF0820B05DB000787746 /* Icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 0479BEFB20B05DAD00787746 /* Icon152.png */; };
@@ -40,6 +41,7 @@
 		042ABA162035D97700F3792B /* navigationToUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationToUserList.swift; sourceTree = "<group>"; };
 		04400DB9202CA43300DD5007 /* ViewControllerLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLoginScreen.swift; sourceTree = "<group>"; };
 		04400DBF202CD3AF00DD5007 /* LoggedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
+		0464CB2120B6EFA30002B036 /* Memo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Memo.png; sourceTree = "<group>"; };
 		0479BEF920B05DAD00787746 /* Icon20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon20.png; sourceTree = "<group>"; };
 		0479BEFA20B05DAD00787746 /* Icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon76.png; sourceTree = "<group>"; };
 		0479BEFB20B05DAD00787746 /* Icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon152.png; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				048ED5BC1FE457FE00AAEEFB /* GoogleService-Info.plist */,
 				048ED5A21FE450A000AAEEFB /* AppDelegate.swift */,
 				048ED5A41FE450A000AAEEFB /* ViewController.swift */,
+				0464CB2120B6EFA30002B036 /* Memo.png */,
 				048ED5A61FE450A000AAEEFB /* Main.storyboard */,
 				048ED5A91FE450A000AAEEFB /* Assets.xcassets */,
 				04DB4DAA20A4B93F00B74EA6 /* EditNoteViewController.swift */,
@@ -230,6 +233,7 @@
 				0479BF0D20B05DB000787746 /* Icon167.png in Resources */,
 				048ED5AA1FE450A000AAEEFB /* Assets.xcassets in Resources */,
 				0479BF0620B05DB000787746 /* Icon20.png in Resources */,
+				0464CB2220B6EFA40002B036 /* Memo.png in Resources */,
 				048ED5A81FE450A000AAEEFB /* Main.storyboard in Resources */,
 				0479BF0920B05DB000787746 /* Icon80.png in Resources */,
 				0479BF0F20B05DB000787746 /* Icon40.png in Resources */,

@@ -15,10 +15,17 @@ import Anchors
 
 class ViewControllerLoginScreen: UIViewController {
     
+    let backgroundView = UIImageView()
     let pastel = PastelView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    /*  backgroundView.image = UIImage(named: "Memo")!
+        backgroundView.contentMode = .scaleAspectFit
+        backgroundView.alpha = 0.5 */
+        //tableView.backgroundView = backgroundView
+        //tableView.tableFooterView = UIView()
         
         view.insertSubview(pastel, at: 0)
         activate(pastel.anchor.edges)
