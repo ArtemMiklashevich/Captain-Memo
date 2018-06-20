@@ -17,4 +17,5 @@ class navigationToUserList: UINavigationController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
 }
